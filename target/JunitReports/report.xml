@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="2" time="34.741">
+    <testcase classname="As user I want to be able to login under different roles" name="Login as a librarian" time="18.954">
+        <system-out><![CDATA[Given I am on the login page................................................passed
+When user logs in as a "librarian"..........................................passed
+Then dashboard should be displayed..........................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="As user I want to be able to login under different roles" name="Login as a student" time="14.263">
+        <system-out><![CDATA[Given I am on the login page................................................passed
+When user log in as a "student29"...........................................passed
+Then books should be displayed..............................................passed
+]]></system-out>
+    </testcase>
+</testsuite>
