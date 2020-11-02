@@ -11,8 +11,8 @@ import org.junit.runner.RunWith;
                 "html:target/HtmlReports","html:target/cucumber-report.html"},
         features = "src/test/resources/features",
         glue = "com/library/step_definitions",
-        dryRun = true,
-        tags = "@login"
+        dryRun = false,
+        tags = "@libraryAllLogin"
 
 
 

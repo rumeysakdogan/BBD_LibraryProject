@@ -1,8 +1,10 @@
 package com.library.step_definitions;
 
+import com.library.pages.BasePage;
 import com.library.pages.LoginPage;
 import com.library.utils.ConfigurationReader;
 import com.library.utils.Driver;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -59,6 +61,19 @@ public class LoginStepDefinitions {
 
         Assert.assertTrue(actual.contains(expected));
         Driver.closeDriver();
+    }
+
+
+    @Given("user is on library login page")
+    public void userIsOnLibraryLoginPage() {
+        Driver.getDriver().get(ConfigurationReader.getProperty("libraryUrl"));
+        BasePage.waitTime(2);
+    }
+
+    @Given("user enters {string} and {string} and click login button")
+    public void user_enters_and_and_click_login_button(String email, String password) {
+        loginPage.loginWithParameters(email, password);
+        BasePage.waitTime(3);
     }
 
 

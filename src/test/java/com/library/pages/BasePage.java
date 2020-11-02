@@ -51,7 +51,12 @@ public abstract class BasePage {
         return title.getText();
     }
 
-
+    public static void waitTime(int seconds) {
+        try {
+            Thread.sleep(seconds * 1000);
+        } catch (InterruptedException e) {
+        }
+    }
 
 
 
