@@ -15,7 +15,8 @@ import static com.library.utils.BrowserUtils.clickOnElement;
 import static com.library.utils.BrowserUtils.clickWithJS;
 
 public class BooksPage extends BasePage {
-    Faker faker=new Faker();
+    Faker faker = new Faker();
+
     public BooksPage() {
         PageFactory.initElements(Driver.getDriver(), this);
     }
@@ -59,23 +60,22 @@ public class BooksPage extends BasePage {
     @FindBy(xpath = "//button[@type='submit']")
     private WebElement saveChanges;
 
-public void fillingUpRequiredFields(){
+    public void fillingUpRequiredFields() {
 
-    bookNameField.sendKeys(faker.book().title());
+        bookNameField.sendKeys(faker.book().title());
 
-    isbnField.sendKeys(faker.idNumber().invalid());
+        isbnField.sendKeys(faker.idNumber().invalid());
+        //test
 
-    yearField.sendKeys(faker.date().birthday().toString());
+        yearField.sendKeys(faker.date().birthday().toString());
 
-    authorField.sendKeys(faker.name().fullName());
+        authorField.sendKeys(faker.name().fullName());
 
-}
-public void clickingSaveChanger(){
-    clickOnElement(saveChanges);
-}
+    }
 
-
-
+    public void clickingSaveChanger() {
+        clickOnElement(saveChanges);
+    }
 
 
 }
