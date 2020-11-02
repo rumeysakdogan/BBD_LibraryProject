@@ -14,10 +14,10 @@ import java.util.List;
 import static com.library.utils.BrowserUtils.clickOnElement;
 import static com.library.utils.BrowserUtils.clickWithJS;
 
-public class BooksPage extends BasePage {
+public class LibraryBooksManagementPage extends BasePage {
     Faker faker = new Faker();
 
-    public BooksPage() {
+    public LibraryBooksManagementPage() {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
