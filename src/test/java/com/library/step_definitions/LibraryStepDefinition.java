@@ -1,5 +1,7 @@
 package com.library.step_definitions;
 
+import com.github.javafaker.Faker;
+import com.library.pages.LibrarianAddUserPage;
 import com.library.pages.LibrarianUserManagementElements;
 import com.library.pages.LoginPage;
 import com.library.utils.ConfigurationReader;
@@ -12,8 +14,10 @@ import java.util.List;
 public class LibraryStepDefinition {
 LoginPage loginPage = new LoginPage();
 LibrarianUserManagementElements userManagement = new LibrarianUserManagementElements();
+LibrarianAddUserPage addUserPage = new LibrarianAddUserPage();
 
-
+    Faker faker = new Faker();
+    String fullNameFaker = faker.name().fullName();
 
 
     @And("use login in as librarian role")
@@ -34,11 +38,36 @@ LibrarianUserManagementElements userManagement = new LibrarianUserManagementElem
         Assert.assertTrue(expected.equals(userManagement.getHeaderNamesAsListOfString()));
         LoginPage.waitTime(2);
     }
+    @And("user select librarian from User Group dropdown")
+    public void userSelectLibrarianFromUserGroupDropdown() {
+        userManagement.selectLibrarianFromUserGroupDropDown();
+    }
+    @And("user filtering users by Inactive status in Status box")
+    public void userFilteringUsersByInactiveStatusInStatusBox() {
+        userManagement.selectInactiveFromStatusGroup();
+    }
+    @And("user select students from User Group dropdown")
+    public void userSelectStudentsFromUserGroupDropdown() {
+        userManagement.selectStudentsFromUserGroupDropDown();
+    }
 
+    @And("user select all from User Group dropdown")
+    public void userSelectAllFromUserGroupDropdown() {
+        userManagement.selectAllFromUserGroupDropDown();
+    }
+    @And("user filtering users by Active status in Status box")
+    public void userFilteringUsersByActiveStatusInStatusBox() {
+        userManagement.selectActiveFromStatusGroup();
+    }
+    @And("librarian user clicks on add user button")
+    public void librarianUserClicksOnAddUserButton() {
+        userManagement.clickAddUser();
+    }
+    @Then("librarian will add a new user and save it")
+    public void librarianWillAddANewUserAndSavingIt() {
+        addUserPage.addNewUserFillOutForm(faker.address().fullAddress(),fullNameFaker,fullNameFaker,fullNameFaker.replace(" ","")+"@WTF.com");
 
-
-
-
+    }
 
 
 
