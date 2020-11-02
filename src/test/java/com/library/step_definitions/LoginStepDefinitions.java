@@ -73,7 +73,7 @@ public class LoginStepDefinitions {
     @Given("user enters {string} and {string} and click login button")
     public void user_enters_and_and_click_login_button(String email, String password) {
         loginPage.loginWithParameters(email, password);
-        BasePage.waitTime(3);
+        BasePage.waitTime(2);
     }
 
 
