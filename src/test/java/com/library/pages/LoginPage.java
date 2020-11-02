@@ -20,8 +20,6 @@ public class LoginPage extends BasePage {
     private WebElement signIn;
 
 
-
-
     public void login(String usernameValue, String passwordValue) {
         username.sendKeys(usernameValue);
         password.sendKeys(passwordValue, Keys.ENTER);
