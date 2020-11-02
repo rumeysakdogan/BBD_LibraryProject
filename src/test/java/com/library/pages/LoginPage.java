@@ -53,4 +53,24 @@ public class LoginPage extends BasePage {
         username.sendKeys(usernameValue);
         password.sendKeys(passwordValue, Keys.ENTER);
     }
+
+    public void loginWithParameters(String usernameInput, String passwordInput){
+        username.sendKeys(usernameInput);
+        password.sendKeys(passwordInput);
+        signIn.click();
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
