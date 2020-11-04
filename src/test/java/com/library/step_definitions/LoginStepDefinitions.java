@@ -30,7 +30,7 @@ public class LoginStepDefinitions {
 
     @When("user logs in as a {string}")
     public void user_logs_in_as_a(String string) {
-      loginPage.login("librarian");
+      loginPage.login(string);
     }
 
     @Then("dashboard should be displayed")
