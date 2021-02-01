@@ -1,5 +1,6 @@
 package com.library.pages;
 
+import com.library.utils.BrowserUtils;
 import com.library.utils.Driver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -12,10 +13,10 @@ public class BorrowingBooksPage extends  BasePage{
 
     WebDriverWait wait = new WebDriverWait(Driver.getDriver(),20);
 
-    @FindBy(xpath = "//table//tbody//tr//td[1]")
+    @FindBy(className = "btn btn-primary btn-sm disabled")
     private List<WebElement> returnBookButtons;
 
-    @FindBy(id = "toast-container")
+    @FindBy(xpath = "//div[@class='toast toast-success']")
     private WebElement successMessage;
 
     public void clickOnReturnBookButton(){
@@ -27,8 +28,8 @@ public class BorrowingBooksPage extends  BasePage{
         }
     }
 
-    public String getSuccessMessageText(){
+    public WebElement getSuccessMessage(){
 
-        return successMessage.getText();
+        return successMessage;
     }
 }

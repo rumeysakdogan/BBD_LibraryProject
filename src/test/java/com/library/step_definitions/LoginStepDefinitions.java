@@ -29,8 +29,8 @@ public class LoginStepDefinitions {
     }
 
     @When("user logs in as a {string}")
-    public void user_logs_in_as_a(String string) {
-      loginPage.login(string);
+    public void user_logs_in_as_a(String role) {
+      loginPage.login(role);
     }
 
     @Then("dashboard should be displayed")
@@ -46,10 +46,10 @@ public class LoginStepDefinitions {
     }
 
 
-    @When("user log in as a {string}")
-    public void user_log_in_as_a(String string) {
-        loginPage.login("student29");
-    }
+//    @When("user log in as a {string}")
+//    public void user_log_in_as_a(String string) {
+//        loginPage.login(string);
+//    }
 
     @Then("books should be displayed")
     public void books_should_be_displayed() {

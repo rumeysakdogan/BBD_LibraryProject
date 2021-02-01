@@ -5,6 +5,7 @@ Feature: Return book
   Scenario: Return Success Message Verification
     Given user is on library login page
     When user logs in as a "student29"
+    Then user clicks on borrow book button
     And user navigate to Borrowing Books module
     When user click on return book button
-    Then user should see "The book has been returned.." message
+    Then user should see success message

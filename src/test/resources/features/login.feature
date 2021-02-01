@@ -13,3 +13,4 @@ Feature: As user I want to be able to login under different roles
   Scenario: Login as a student
     When user log in as a "student29"
     Then books should be displayed
+

@@ -23,11 +23,11 @@ public class BorrowingBooksStepDefinitions {
         borrowingBooksPage.clickOnReturnBookButton();
     }
 
-    @Then("user should see {string} message")
-    public void user_should_see_message(String expectedMessage) {
-        BrowserUtils.wait(2);
-        String actualMessage = borrowingBooksPage.getSuccessMessageText();
-        Assert.assertEquals(actualMessage, expectedMessage);
+    @Then("user should see success message")
+    public void user_should_see_success_message() {
+
+        Assert.assertTrue(borrowingBooksPage.getSuccessMessage().isDisplayed() );
+
     }
 
 }

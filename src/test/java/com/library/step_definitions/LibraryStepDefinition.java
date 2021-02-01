@@ -12,6 +12,7 @@ import org.junit.Assert;
 import java.util.List;
 
 public class LibraryStepDefinition {
+
 LoginPage loginPage = new LoginPage();
 LibrarianUserManagementElements userManagement = new LibrarianUserManagementElements();
 LibrarianAddUserPage addUserPage = new LibrarianAddUserPage();

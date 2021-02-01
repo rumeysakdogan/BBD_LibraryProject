@@ -18,9 +18,6 @@ public abstract class BasePage {
     @FindBy(xpath = "/html/head/title")
     private WebElement title;
 
-    @FindBy()
-    private WebElement Dasboard;
-
     @FindBy(linkText = "Users")
     private WebElement usersPageLink;
 
@@ -57,8 +54,5 @@ public abstract class BasePage {
         } catch (InterruptedException e) {
         }
     }
-
-
-
 
 }

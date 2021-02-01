@@ -1,5 +1,7 @@
 package com.library.step_definitions;
 
+import com.library.utils.ConfigurationReader;
+import com.library.utils.DB_Utility;
 import com.library.utils.Driver;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
@@ -37,12 +39,19 @@ import java.util.concurrent.TimeUnit;
          */
         @Before(value = "@db", order = 0)
         public void dbSetup() {
+
             System.out.println("::: Connecting to the database:::");
+            DB_Utility.createConnection(ConfigurationReader.getProperty("library2.db.url"),
+                                        ConfigurationReader.getProperty("library2.db.username"),
+                                        ConfigurationReader.getProperty("library2.db.password")  );
+
         }
 
         @After("@db")
-        public void dbTearDown() {
+        public void dbTearDown()
+        {
             System.out.println("::: Disconnecting from the database:::");
+            DB_Utility.destroy();
         }
 
         @After
