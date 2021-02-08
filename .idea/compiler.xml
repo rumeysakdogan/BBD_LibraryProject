@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="BBD_LibraryProject" />
+        <module name="BBD_LibraryProject_FromRumeysa" />
         <module name="Summer2020CucumberTestAutomationProject" />
       </profile>
     </annotationProcessing>
