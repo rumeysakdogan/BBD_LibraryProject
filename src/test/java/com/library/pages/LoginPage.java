@@ -12,6 +12,7 @@ public class LoginPage extends BasePage {
 
     @FindBy(className = "form-control")
     private WebElement username;
+    // locater type is changed
 
     @FindBy(id = "inputPassword")
     private WebElement password;
