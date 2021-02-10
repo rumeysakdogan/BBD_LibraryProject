@@ -10,7 +10,7 @@ public class LoginPage extends BasePage {
     //To not use web elements directly in step definition classes
     //helps to prevent code duplication and keep step definitions clean
 
-    @FindBy(id = "inputEmail")
+    @FindBy(className = "form-control")
     private WebElement username;
 
     @FindBy(id = "inputPassword")
