@@ -13,6 +13,7 @@ public class LoginPage extends BasePage {
     @FindBy(id = "inputEmail")
     private WebElement username;
 
+    //some changes
     @FindBy(id = "inputPassword")
     private WebElement password;
 
