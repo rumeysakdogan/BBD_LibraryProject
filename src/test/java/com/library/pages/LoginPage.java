@@ -12,7 +12,7 @@ public class LoginPage extends BasePage {
 
     @FindBy(id = "inputEmail")
     private WebElement username;
-//checking checking for conflict
+//checking checking for conflict checking
     @FindBy(id = "inputPassword")
     private WebElement password;
 
